@@ -1,0 +1,839 @@
+/* The below code is used to reset all of the default spacing in our webpage */
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* the code below edits the width of the scrollbar */
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+/* The code below is to cutomize the track, where scrollbar */
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+ 
+/* The code below customize the handle , which is the scrollbar */
+::-webkit-scrollbar-thumb{
+    background: rgb(61, 61, 92);
+    border-radius: 10px;
+}
+
+/*The code below edits the width of the scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header{
+    background-color: antiquewhite; 
+    /*background color is to change the background your element*/
+    margin: 0px;
+    /*margin is used to create spacing between your elements, outside the border*/
+    padding: 25px;
+    /*padding is used to create spacing for elements inside the border*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*Add this line to center content in your header vertically*/
+}
+
+nav{
+    background-color: burlywood;
+}
+
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    margin: 10px;
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+#hero-section{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    background-position:  center;
+    height: 65vh;
+}
+#hero-content{
+    heigth:inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(226, 226, 226, 0.26);
+}
+#hero-content h2{
+    font-size: 90px;
+}
+
+#hero-content p {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+#hero-content p{
+    font-size: 50px;
+}
+#hero-content .call-to.action-btn a { 
+    /* background-color: azure; */
+    /* justify-content: spacing-around; */
+     magrun-top: 20px;
+
+}
+
+#hero-content .call-to.action-btn{
+    text-decoration: none;
+    margin: 40px;
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: 2px;
+    color: antiquewhite;
+    border: 1px solid #d80a0a;
+    border-radius: 50px;
+
+}
+#brief-info{
+    margin: 10px;
+    padding: 10px;
+
+}
+    
+#brief-info{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    margin: 25px;
+}
+
+ .summary-content img{
+    width: 40%;
+    height: 40%;
+    border-radius: 20px;
+ }
+
+ .summary-text{
+    margin: 10px;
+    font-size: 20px;
+ }
+
+ footer{
+    background-color: antiquewhite;
+    /* background color is the background of your element */
+    margin: 0px;
+    /* margin is used to create spacing between your elements, outside the border*/
+    padding: 25px;
+    /* padding is used to create spacing for elements inside thr border*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add this line to center content in your header vertically*/
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ footer{
+    font-size: 15px;
+    font-weight: 200;
+ }
+
+ /* =========================================================
+   PINK NAILED IT BEAUTY SALON
+   PART 2 - CSS STYLING AND RESPONSIVE DESIGN
+   ========================================================= */
+/* ---------- CSS RESET ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- BASE STYLES ---------- */
+
+:root {
+    --pink: #e75480;
+    --pink-dark: #b83263;
+    --pink-light: #fff0f5;
+    --rose: #f7c6d9;
+    --cream: #fffaf7;
+    --text: #3f3037;
+    --muted: #76656d;
+    --white: #ffffff;
+    --border: #ead7df;
+    --shadow: 0 10px 30px rgba(82, 37, 56, 0.10);
+    --radius: 1rem;
+    --max-width: 72rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--cream);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section--pink {
+    background: var(--pink-light);
+}
+
+/* ---------- HEADINGS ---------- */
+
+.section-title {
+    max-width: 42rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.section-title p {
+    color: var(--pink-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+
+.section-title h1,
+.section-title h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.15;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 247, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    color: var(--pink-dark);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+/* Hover, Focus and Active */
+
+.nav-list a:hover,
+.nav-list a:focus-visible,
+.nav-list a.active {
+    color: var(--white);
+    background: var(--pink);
+}
+
+.nav-list a:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(231, 84, 128, 0.35);
+    outline-offset: 2px;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    min-height: 72vh;
+    display: grid;
+    place-items: center;
+    padding: 6rem 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(247,198,217,.8),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #fff7fa 0%,
+            #fbd8e5 50%,
+            #fffaf7 100%
+        );
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-content .eyebrow {
+    color: var(--pink-dark);
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    font-size: 0.82rem;
+}
+
+.hero h1 {
+    margin: 0.5rem 0;
+    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    line-height: 0.98;
+    color: #4b2736;
+}
+
+.hero h2 {
+    color: var(--pink-dark);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.hero p {
+    max-width: 38rem;
+    margin: 1.2rem 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 1.25rem;
+    background: var(--pink);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(184,50,99,.2);
+}
+
+/* ---------- DECORATIVE NAIL ART ---------- */
+
+.hero-art {
+    min-height: 22rem;
+    border-radius: 2rem;
+
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #f5b5cc,
+        #e75480
+    );
+
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-art::before,
+.hero-art::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.25);
+}
+
+.hero-art::before {
+    width: 18rem;
+    height: 18rem;
+    top: -6rem;
+    right: -5rem;
+}
+
+.hero-art::after {
+    width: 12rem;
+    height: 12rem;
+    bottom: -4rem;
+    left: -3rem;
+}
+
+.nail-art {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+
+    transform: rotate(-8deg);
+}
+
+.nail {
+    width: 4.2rem;
+    height: 7rem;
+
+    border-radius:
+        2.5rem
+        2.5rem
+        1.5rem
+        1.5rem;
+
+    background: linear-gradient(
+        160deg,
+        #fff,
+        #f9c7d8
+    );
+
+    border: 4px solid rgba(255,255,255,.7);
+
+    box-shadow:
+        0 12px 20px rgba(100,30,60,.15);
+}
+
+/* ---------- GRID LAYOUTS ---------- */
+
+.about-grid,
+.services-grid,
+.audience-grid,
+.review-grid,
+.contact-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.about-grid {
+    grid-template-columns: 1.4fr 0.8fr;
+}
+
+.services-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.audience-grid,
+.review-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 0.55rem;
+    color: #552b3c;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+/* ---------- MISSION ---------- */
+
+.mission {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    border-left: 4px solid var(--pink);
+
+    background: var(--pink-light);
+
+    border-radius:
+        0 0.7rem
+        0.7rem 0;
+}
+
+/* ---------- LIST ---------- */
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
+.feature-list li::before {
+    content: "✓";
+    color: var(--pink);
+    font-weight: 900;
+    margin-right: 0.55rem;
+}
+
+/* ---------- SERVICE ICON ---------- */
+
+.service-icon {
+    width: 3rem;
+    height: 3rem;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    margin-bottom: 1rem;
+
+    background: var(--pink-light);
+    color: var(--pink-dark);
+
+    font-weight: 900;
+}
+
+.service-icon::before {
+    content: "✦";
+}
+
+.audience-card {
+    text-align: center;
+}
+
+.audience-card .service-icon {
+    margin-inline: auto;
+}
+
+/* ---------- PRICING ---------- */
+
+.price-table {
+    max-width: 48rem;
+    margin: auto;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 1rem 1.25rem;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.price-row:last-child {
+    border-bottom: 0;
+}
+
+.price-row.header {
+    background: var(--pink);
+    color: var(--white);
+    font-weight: 900;
+}
+
+.price-row:not(.header):hover {
+    background: var(--pink-light);
+}
+
+/* ---------- RESPONSIVE IMAGES ---------- */
+
+.responsive-image {
+    width: 100%;
+    max-height: 22rem;
+
+    object-fit: cover;
+
+    border-radius: var(--radius);
+
+    margin-top: 1.5rem;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.contact-item {
+    margin-top: 1.25rem;
+}
+
+.contact-item strong {
+    color: var(--pink-dark);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+}
+
+.social-links a {
+    padding: 0.5rem 0.75rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.social-links a:hover {
+    background: var(--pink);
+    color: var(--white);
+}
+
+/* ---------- FORM ---------- */
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 800;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 0.8rem 0.9rem;
+
+    border: 1px solid #d9c2cc;
+    border-radius: 0.7rem;
+
+    background: var(--white);
+    color: var(--text);
+}
+
+.form-message {
+    margin-top: 0.75rem;
+    font-weight: 700;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+    padding: 3rem 0;
+
+    background: #3f2732;
+    color: #fff;
+}
+
+.footer-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--rose);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   DESKTOP
+   TABLET
+   MOBILE
+   ========================================================= */
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1024px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audience-grid,
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        min-height: 18rem;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+
+    html {
+        font-size: 94%;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .navbar {
+        min-height: auto;
+        padding: 0.8rem 0;
+
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-list {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-list a {
+        text-align: center;
+
+        padding:
+            0.55rem
+            0.35rem;
+
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            2.5rem,
+            14vw,
+            4rem
+        );
+    }
+
+    .hero-art {
+        min-height: 15rem;
+    }
+
+    .nail {
+        width: 3rem;
+        height: 5rem;
+    }
+
+    .services-grid,
+    .audience-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-row {
+        padding: 0.85rem;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+   
